@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header">
+    Experience
+  </div>
+  <div class="card-body">
+
+      <div *ngFor="let experience of experiences">
+
+
+          <div class="card">
+            <div class="card-header">
+             {{ experience.position}}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> {{ experience.start }} -
+                    <span *ngIf="experience.end">
+                        {{experience.end}}
+                    </span>
+
+                    <span *ngIf="!experience.end">
+                        ...
+                    </span>
+
+               </h5>
+              <p class="card-text">{{ experience.institute }}</p>
+               <p class="card-text">{{ experience.address }}</p>
+              <a href="#" class="btn btn-primary">Website</a>
+            </div>
+          </div>
+          <br>
+      </div>
+  </div>
+</div>
